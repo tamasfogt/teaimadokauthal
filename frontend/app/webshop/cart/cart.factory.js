@@ -13,27 +13,51 @@ function CartFactory($http, URL_CONFIG, $rootScope, $cookies){
   return service;
 
     function addProduct(product) {
-         $rootScope.products.push(product);
+        let products = [];
+        if($cookies.get("teaimadokproducts")){
+            products = JSON.parse($cookies.get("teaimadokproducts"));
+        }
+        
+        
+        let pos = products.map(function(item) { return item.name; }).indexOf(product.name);
+        if(pos!==-1){
+            products[pos].quantity=  products[pos].quantity+1;
+        }else{
+            products.push(product);
+        }
+       
+        $cookies.put("teaimadokproducts",JSON.stringify(products));
+
     }
     function getProducts() {
-        return $rootScope.products;
+        let products = [];
+        if($cookies.get("teaimadokproducts")){
+            products = JSON.parse($cookies.get("teaimadokproducts"));
+        }
+        return products;
+
     }
     
     function updateProducts(products) {
-        $rootScope.products = products;
+        if($cookies.get("teaimadokproducts")){
+            $cookies.put("teaimadokproducts",JSON.stringify(products));
+        }
     }
     function buy() {
-        var myproducts ={
-            products:$rootScope.products
+        var myproducts = [];
+        
+        if($cookies.get("teaimadokproducts")){
+            myproducts = JSON.parse($cookies.get("teaimadokproducts"));
         }
+
         if($cookies.get("teaimadok")){
             myproducts.teaimadok = $cookies.get("teaimadok");
         }
-        console.log($rootScope.products);
-
         $http.post('/api/buy', myproducts);
-        
+        return $http.get('/api/isauthenticated');
     }
+    
+    
 }
 
 export default CartFactory;

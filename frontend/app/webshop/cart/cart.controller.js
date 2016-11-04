@@ -6,7 +6,7 @@ function CartController(CartFactory,$state,$rootScope,  toastr) {
     vm.addProduct = addProduct;
     vm.subProduct = subProduct;
     vm.removeProduct = removeProduct;
-    
+     vm.showPayment = false;
     function addProduct() {
         updateProduct(vm.products);    
     }
@@ -29,10 +29,15 @@ function CartController(CartFactory,$state,$rootScope,  toastr) {
     }
     
     function buyProduct(){
-
-        
-        $state.go('buyfailed');
-        CartFactory.buy(vm.products);
+     //   $state.go('buyfailed');
+        CartFactory.buy(vm.products).then(function(response){
+            
+            if(response.data === 'false'){
+                console.log(response.data)
+                 window.location.href = "/login"
+            }
+            vm.showPayment = true;
+        });
     }
     
     function success(response) {

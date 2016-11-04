@@ -7,7 +7,7 @@ use Illuminate\Http\Request;
 use \App\Models\User;
 use Validator;
 use \Authorizer;
-
+use Auth;
 class UserController extends Controller {
 	
 
@@ -23,18 +23,11 @@ class UserController extends Controller {
         
     }
 
-           
-    public function registerUser(Request $request){      
     
-        $user = new User();
-        $user->username = $request->input('username');
-        $user->name = $request->input('name');
-        $user->email = $request->input('email');
-        $user->password = \Illuminate\Support\Facades\Hash::make($request->input('password'));
-  return response($user,200);
-        $user->save();
-        
-        }
+    public function isAuthenticated(){      
+        return response(json_encode( Auth::check() ), 200);
+    }
+    
     public function updateUserDetails(Request $request){
         User::find(Authorizer::getResourceOwnerId());
         $user->username = $request->input('username');

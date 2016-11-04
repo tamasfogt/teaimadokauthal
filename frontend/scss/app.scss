@@ -215,6 +215,10 @@ a.project-link:hover {
 }
 
 .cart {
+    .closed{
+        display:none;
+    }
+    
     .title {
         margin-top:100px;
         text-transform: uppercase;
@@ -284,7 +288,29 @@ a.project-link:hover {
         }    
 
     }
+    .shipment{
+        .shipment-header{
+            
+            font-size: 30px;
+            font-weight: 800;
+            margin-top: 25px;
+            text-transform: uppercase;
 
+        }
+        .shipment-content{
+            padding:10px;
+            box-shadow: 0 8px 17px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+        }
+        .shipment-details{
+            
+        }
+        .shipment-payment-type-chooser{
+            
+        }
+        .shipment-review{
+            
+        }
+    }
     
     margin-top:100px;
 
@@ -436,9 +462,10 @@ filter:progid:DXImageTransform.Microsoft.dropshadow(OffX=0,OffY=2,Color=#3300000
      color: lightgray; 
 }
 
-    .facebook {
+.facebook {
      background: #3b5998;
-    }
-    .google-plus{
+}
+.google-plus{
       background: #db4a39;
-    }
+}
+

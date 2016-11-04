@@ -98,13 +98,20 @@
                             <a href="" ><i class="fa fa-circle fa-stack-1x"></i><i class="fa fa-facebook fa-stack-1x fa-inverse"></i></a>
                             <a href=""><i class="fa fa-circle fa-stack-1x"></i><i class="fa fa-youtube fa-stack-1x fa-inverse"></i></a>
                             <a  href=""><i class="fa fa-circle fa-stack-1x"></i><i class="fa fa-instagram fa-stack-1x fa-inverse"></i></a>
-                        </li>
-                          <li><a href="" ng-click="login()">Login</a></li>
-                          <li><a href=""  ng-click="register()">Regisztráció</a></li>
-                          <li><a  ui-sref="profile">Profil</a></li>
-                          <li><a href="" ng-click="logout()">Logout</a></li>
-                          <li><a href="#"  ui-sref="product({productId: 'matcha'})">Termékhez</a></li>
+                        </li>                          
+                        <li><a href="#"  ui-sref="product({productId: 'matcha'})">Termékhez</a></li>
 						  <li><a href="#" style="padding-bottom: 5px;padding-top: 12px;" ui-sref="cart"><i class="fa fa-shopping-cart  fa-2x hidden-xs" aria-hidden="true"></i><span class="visible-xs">Kosár</span><span ng-if="cartCount!==0"  class="hidden-xs">{{cartCount}}</span></a></li>
+                           <li class="dropdown men "><a href="" style="padding: 15px;" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-user fa-2x"></i><b class="caret"></b></a>
+                            <ul class="dropdown-menu">
+                        <?php     if (Auth::check()) {   ?>
+                                    <li><a  ui-sref="profile">Profil</a></li>
+                                    <li><a href="" ng-click="logout()">Kijelentkezés</a></li>
+                          <?php  }else{   ?>
+                                    <li><a href="" ng-click="login()">Bejelentkezés</a></li>
+                                    <li><a href=""  ng-click="register()">Regisztráció</a></li>
+                        <?php      }  ?>
+                            </ul>
+                            </li>  
                         </ul>
                     </div>
                     <!-- /.navbar-collapse -->

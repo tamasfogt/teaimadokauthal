@@ -1,4 +1,4 @@
-function HeaderController($scope,$http) {
+function HeaderController($scope, $http, $cookies, $timeout) {
   "ngInject"
   
     $scope.isLoggedIn =false;
@@ -7,9 +7,14 @@ function HeaderController($scope,$http) {
         
     $scope.login = login;
     $scope.register = register;
+
+    if($cookies.get("teaimadokproducts")){
+        let products = JSON.parse($cookies.get("teaimadokproducts"));
+         $scope.cartCount = products.length;
+    }
+    
     
     function login() {
-        console.log('login')
       window.location.href = "/login"
     }
 
@@ -18,8 +23,14 @@ function HeaderController($scope,$http) {
     }
     
     $scope.$on('updatecartheader', function(event, args) {
-        var count = args.add;
-        $scope.cartCount = $scope.cartCount + count;
+       
+            $timeout(function() {
+                if($cookies.get("teaimadokproducts")){
+                    let products = JSON.parse($cookies.get("teaimadokproducts"));
+                    $scope.cartCount = products.length;
+                }
+                }, 200);
+
     });
     
     function logout(){

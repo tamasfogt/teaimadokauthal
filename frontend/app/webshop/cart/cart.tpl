@@ -1,6 +1,7 @@
 <div class="cart">
     <div class="container">
     <h1 class="title">Kosár</h1>
+    <div ng-hide="vm.showPayment">
     <div ng-show="vm.products.length==0">
         <h1>Üres a kosarad !</h1>
     </div>
@@ -45,5 +46,60 @@
             <a class="btn-large col-md-12 col-sm-12 col-xs-12" style="font-size:30px;" href="" ng-click="vm.buyProduct()">Fizetés</a>
         </div>
     </div>
-    </div>    
-</div>
+    </div>   
+
+    <div > <!--ng-show="vm.showPayment"-->
+        <div class="shipment">
+            <div class="shipment-details">
+                    <div class="shipment-header col-md-12 col-sm-12 col-xs-12">Adatok</div>
+                        <div class="shipment-content closed col-md-12 col-sm-12 col-xs-12">
+                            <form name="detailsform" class="subscribe_form" novalidate>
+                                <div class="form-group">
+                                    <input type="text" class="required form-control"  name="name" id="name"  placeholder="Név" required/>
+                                </div>
+                                <div class="form-group">
+                                    <input type="text" class="required form-control"  name="phone" id="phone"  placeholder="Telefonszám" required/>
+                                </div>
+                                <div class="form-group">
+                                    <input type="text" class="required form-control"  name="city" id="city"  placeholder="Város" required/>
+                                </div>
+                                <div class="form-group">
+                                    <input type="text" class="required form-control"  name="zipcode" id="zipcode"  placeholder="Irányító szám" required/>
+                                </div>
+                                <div class="form-group">
+                                    <input type="text" class="required form-control"  name="address" id="address"  placeholder="Cím" required/>
+                                </div>                            
+                                <div class="input-field ">
+                                    <textarea name="message" class="form-control" rows="10" cols="10" id="message"   placeholder="Üzenet" required></textarea>
+                                </div>
+                            </form>
+                            <button class="btn-large col-md-12 col-sm-12 col-xs-12">Tovább</button>
+                        </div>
+                 </div>  
+                <div class="shipment-payment-type-chooser">
+                    <div class="shipment-header col-md-12 col-sm-12 col-xs-12">Fizetési típusa</div>
+                    <div class="shipment-content closed col-md-12 col-sm-12 col-xs-12">
+                     <!--   <div class="card"></div> -->
+                        <form novalidate>
+                            <div class="paypal">
+                                <label for="paypal">PayPal</label>
+                                <input type="radio" class="option-input radio"  name="payment" id="paypal" value="paypal" required/>
+                            </div>      
+                            <div class="courier">
+                                <label for="courier">Futárnak készpénzzel</label>
+                                <input type="radio" class="option-input radio"  name="payment" id="courier" value="courier" required/>
+                            </div>
+                        </form>    
+                    </div>
+                </div>
+                <div class="shipment-review">
+                      <div class="shipment-header col-md-12 col-sm-12 col-xs-12">Áttekintés</div>
+                        <div class="shipment-content closed col-md-12 col-sm-12 col-xs-12">
+                            táblázat benne adatok kilistázva
+                        </div>
+                </div>
+                    <button class="btn-large col-md-12 col-sm-12 col-xs-12">Fizetés befejezése</button> 
+            </div>
+        </div>    
+    </div>
+</div>    

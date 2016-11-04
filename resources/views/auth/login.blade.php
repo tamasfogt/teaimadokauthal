@@ -66,7 +66,7 @@
                     </form>
                     </div>
                     <div class=" col-md-12 col-sm-12 col-xs-12 socialmedia">
-                    <a href="redirect" class="socbutton facebook"><i class="fa fa-facebook"></i> Bejelentkezés Facebookal</a>
+                    <a href="redirect" class="socbutton facebook"><i class="fa fa-facebook"></i> Bejelentkezés</a>
                     </div>
                 </div>
             </div>

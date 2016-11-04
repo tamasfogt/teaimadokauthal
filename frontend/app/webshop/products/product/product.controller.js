@@ -42,9 +42,18 @@ function ProductController(CartFactory,$rootScope, $stateParams, $state,toastr) 
     }
     
     function buy() {
-        let product = angular.copy(vm.product);
+        let product = {
+            name: vm.product.name,
+            quantity: vm.product.quantity,
+            price: vm.product.price,
+            gramm: vm.product.gramm,
+            pricePerItem: vm.product.pricePerItem,
+            serving: vm.product.serving,
+            image: vm.product.image,
+        }
           toastr.success('Hozzáadva', 'Hozzáadtuk a kosár tartalmához!');
          $rootScope.$broadcast('updatecartheader', { add: 1 });
+        
         CartFactory.addProduct(product);
     }
 }

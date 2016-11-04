@@ -3,7 +3,7 @@ function MainRun($rootScope, $log,$http,$window,  $location) {
 	 $rootScope.$on('$stateChangeStart', function(event, toState, toParams, fromState, fromParams) { 
             $window.ga('send', 'pageview', {page: $location.url()});
             $( "#preloader" ).removeClass( "mypreloaderNone" );  
-
+         console.log(window.Laravel);
             $( "#mypreloaderbackground" ).addClass( "mypreloaderbackground" );
          $log.debug('$stateChangeStart', arguments); 
      });

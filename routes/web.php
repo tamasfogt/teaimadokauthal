@@ -51,6 +51,9 @@ Route::get('/login', 'LoginController@index');
 Route::get('/redirect', 'SocialAuthController@redirect');
 Route::get('/callback', 'SocialAuthController@callback');
 
+Route::get('/api/isauthenticated', 'UserHandler\UserController@isAuthenticated');
+
+
 Route::get('/profile', function () {
     return view('index');
 })->middleware('auth');;
