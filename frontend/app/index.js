@@ -7,7 +7,7 @@ import Common from './common/module';
 import Webshop from './webshop/module';
 
 
-angular.module('myapp', ['ui.router', 'ui.bootstrap', 'ngAnimate', 'ngCookies', 'toastr', 
+angular.module('myapp', ['ui.router', 'ui.bootstrap', 'ngAnimate', 'ngCookies','ngMessages', 'toastr', 
                          Common.name,
                          UserHandler.name,
                         Webshop.name

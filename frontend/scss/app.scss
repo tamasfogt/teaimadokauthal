@@ -298,6 +298,7 @@ a.project-link:hover {
 
         }
         .shipment-content{
+            margin-top:20px;
             padding:10px;
             box-shadow: 0 8px 17px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
         }
@@ -310,7 +311,20 @@ a.project-link:hover {
         .shipment-review{
             
         }
+        .accounting-details{
+
+        }
     }
+    .next {
+        margin-bottom: 20px;
+        margin-top: 20px;
+    }
+    
+    .back {
+        margin-bottom: 20px;
+        margin-top: 20px;
+        background-color: lightgrey;
+    }    
     
     margin-top:100px;
 
@@ -469,3 +483,7 @@ filter:progid:DXImageTransform.Microsoft.dropshadow(OffX=0,OffY=2,Color=#3300000
       background: #db4a39;
 }
 
+.error-message {
+    color:red;
+    font-weight: 500;
+}

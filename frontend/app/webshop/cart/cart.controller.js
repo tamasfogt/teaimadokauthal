@@ -1,4 +1,4 @@
-function CartController(CartFactory,$state,$rootScope,  toastr) {
+function CartController(CartFactory,$state,$rootScope,  toastr, $timeout) {
   "ngInject"
   var vm = this;
     vm.products = CartFactory.getProducts();
@@ -6,7 +6,56 @@ function CartController(CartFactory,$state,$rootScope,  toastr) {
     vm.addProduct = addProduct;
     vm.subProduct = subProduct;
     vm.removeProduct = removeProduct;
-     vm.showPayment = false;
+    vm.showPayment = false;
+
+    vm.shippingDetails = false;
+    vm.shippingPayment  = true;
+    vm.shippingReview = true;    
+    vm.moveToPanel = moveToPanel;
+    
+    vm.modifyShipmentDetails = modifyShipmentDetails;
+    
+    
+    function modifyShipmentDetails(){
+        console.log(vm.shipmentModifyDetails)    
+    }
+    
+    function moveToPanel(moveTo) {
+            
+        switch(moveTo) {
+                case 'shippingDetails':
+                    vm.shippingDetails = false;
+                    vm.shippingPayment  = true;
+                    vm.shippingReview = true; 
+                              $timeout(function() {
+                                  $('html, body').animate({
+                                      scrollTop: $("#details").offset().top-100
+                                  }, 500);
+                              }, 200);
+                break;
+                case 'shippingPayment':
+                    vm.shippingDetails = true;
+                    vm.shippingPayment  = false;
+                    vm.shippingReview = true; 
+                    $timeout(function() {
+                        $('html, body').animate({
+                            scrollTop: $("#payment").offset().top-100
+                        }, 500);
+                    }, 200);
+                    
+                break;
+                case 'shippingReview':
+                    vm.shippingDetails = true;
+                    vm.shippingPayment  = true;
+                    vm.shippingReview = false; 
+                    $timeout(function() {        
+                        $('html, body').animate({
+                            scrollTop: $("#review").offset().top-100
+                        }, 500);
+                    }, 200);
+                break;
+        }
+    }
     function addProduct() {
         updateProduct(vm.products);    
     }

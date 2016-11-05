@@ -809,7 +809,7 @@ div.carousel-inner .item img {
 .contact_form {
     padding-top: 30px;
 }
-.contact_form .form-control {
+ .form-control {
     display: block;
     display: block;
     width: 100%;
@@ -829,9 +829,10 @@ div.carousel-inner .item img {
     -o-transition: all 1s;
     transition: all 1s;
     outline: 0px !important;   
+      box-shadow: none;
 
 }
-.contact_form .form-control:focus {
+.form-control:focus {
     border: 1px solid #388e3c;
     border-color: #388e3c;
     outline: 0px none;
@@ -1582,16 +1583,19 @@ div[toast].ng-leave.ng-leave-active {
   content: '';
   display: block;
   position: relative;
-  z-index: 100;
+  z-index: 10;
 }
 .option-input.radio {
-  border-radius: 50%;
+    border-radius: 50%;
+    z-index: 10;
 }
 .option-input.radio::after {
-  border-radius: 50%;
+    border-radius: 50%;
+    z-index: 10;
 }
-
-
+input[type=file]:focus, input[type=radio]:focus, input[type=checkbox]:focus {
+  outline: none;
+}
 
 
 
