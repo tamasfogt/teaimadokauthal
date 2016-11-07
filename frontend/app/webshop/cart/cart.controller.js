@@ -1,4 +1,4 @@
-function CartController(CartFactory,$state,$rootScope,  toastr, $timeout) {
+function CartController(CartFactory, ProfileFactory, $state,$rootScope,  toastr, $timeout) {
   "ngInject"
   var vm = this;
     vm.products = CartFactory.getProducts();
@@ -7,17 +7,43 @@ function CartController(CartFactory,$state,$rootScope,  toastr, $timeout) {
     vm.subProduct = subProduct;
     vm.removeProduct = removeProduct;
     vm.showPayment = false;
-
+    
+    
     vm.shippingDetails = false;
     vm.shippingPayment  = true;
     vm.shippingReview = true;    
     vm.moveToPanel = moveToPanel;
-    
+    vm.sendOrder = sendOrder;
     vm.modifyShipmentDetails = modifyShipmentDetails;
+    vm.modifyAccountingDetails = modifyAccountingDetails;
     
+    
+    vm.productDetails = {};
+    
+    vm.detailsOk =  vm.productDetails.shipmentDetails && vm.productDetails.accountingDetails;
     
     function modifyShipmentDetails(){
-        console.log(vm.shipmentModifyDetails)    
+        vm.productDetails.shipmentDetails = angular.copy(vm.shipmentModifyDetails);
+        vm.shipmentModify=false; 
+        vm.detailsOk =  vm.productDetails.shipmentDetails && vm.productDetails.accountingDetails;
+    }
+    function modifyAccountingDetails(){
+        vm.productDetails.accountingDetails = angular.copy(vm.accountingModifyDetails);
+        vm.accountingModify=false;
+         vm.detailsOk =  vm.productDetails.shipmentDetails && vm.productDetails.accountingDetails;
+    }
+    
+
+    
+    function sendOrder(){
+        CartFactory.sendOrder(vm.productDetails).then(success,error);
+        
+        function success(response){
+            console.log(success);
+        }
+        function error(error){
+              $state.go('buyfailed');
+        }
     }
     
     function moveToPanel(moveTo) {
@@ -78,7 +104,7 @@ function CartController(CartFactory,$state,$rootScope,  toastr, $timeout) {
     }
     
     function buyProduct(){
-     //   $state.go('buyfailed');
+
         CartFactory.buy(vm.products).then(function(response){
             
             if(response.data === 'false'){
@@ -86,6 +112,34 @@ function CartController(CartFactory,$state,$rootScope,  toastr, $timeout) {
                  window.location.href = "/login"
             }
             vm.showPayment = true;
+            vm.productDetails.products = vm.products;
+            
+            let currentPrice = 0;
+            angular.forEach(vm.productDetails.products, function(product) {
+                    currentPrice = currentPrice + (product.price * product.quantity);
+                })
+            vm.shippingCost = 0; 
+            if(currentPrice<5000){
+                vm.shippingCost = 1000;            
+                currentPrice = currentPrice + vm.shippingCost;
+            } 
+            
+
+            ProfileFactory.getUserDetails().then(function success(data){
+                let userDetails = data.data;
+                if( userDetails.name !== null && userDetails.phone !== null && userDetails.zipcode !== null && userDetails.city !== null && userDetails.address !== null){
+                        vm.productDetails.shipmentDetails = userDetails;
+                        vm.productDetails.accountingDetails = userDetails;
+                        vm.accountingModifyDetails = userDetails;
+                        vm.shipmentModifyDetails = userDetails;
+                    vm.detailsOk =  vm.productDetails.shipmentDetails && vm.productDetails.accountingDetails;            
+                    }
+                },function error(data){
+                    console.log('error happened')
+                });
+            
+            
+            vm.productDetails.fullPrice = currentPrice;
         });
     }
     

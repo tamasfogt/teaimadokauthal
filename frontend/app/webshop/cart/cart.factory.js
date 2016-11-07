@@ -8,7 +8,8 @@ function CartFactory($http, URL_CONFIG, $rootScope, $cookies){
       addProduct: addProduct,
       getProducts: getProducts,
       updateProducts: updateProducts,
-      buy:buy
+      buy:buy,
+      sendOrder:sendOrder
   };
   return service;
 
@@ -57,6 +58,10 @@ function CartFactory($http, URL_CONFIG, $rootScope, $cookies){
         return $http.get('/api/isauthenticated');
     }
     
+    function sendOrder(order){
+        
+      return  $http.post('/api/sendorder', order);  
+    }
     
 }
 

@@ -57,5 +57,11 @@ Route::get('/api/isauthenticated', 'UserHandler\UserController@isAuthenticated')
 Route::get('/profile', function () {
     return view('index');
 })->middleware('auth');;
+
+
+Route::get('/api/user', 'UserHandler\UserController@getUserDetails');
+Route::post('/api/user', 'UserHandler\UserController@setUserDetails');
+Route::post('/api/sendorder', 'CartHandler\BuyProductController@setOrderDetails');
+
 Route::get('auth/logout', 'Auth\LoginController@logout');
 Auth::routes();

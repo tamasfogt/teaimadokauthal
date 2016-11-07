@@ -331,31 +331,31 @@ a.project-link:hover {
     margin-bottom:50px;
 
 }
-.mypreloader{
+.mypreloader {
     position: fixed;
     left: 50%;
     top: 50%;
     z-index: 1000;
 }
-.mypreloaderbackground{
+.mypreloaderbackground {
   -webkit-filter: blur(5px);
   -moz-filter: blur(5px);
   -o-filter: blur(5px);
   -ms-filter: blur(5px);
   filter: blur(5px);
 }
-.mypreloaderNone{
+.mypreloaderNone {
     display: none;
 }
 
-.buyfailed{
-        
+.buyfailed {
     margin-top:100px;
-
     margin-bottom:50px;
-
 }
-
+.buysuccess {     
+    margin-top:100px;
+    margin-bottom:50px;
+}
 #cookiePolicy {
 	position:fixed;
 	z-index:1000;
@@ -487,3 +487,40 @@ filter:progid:DXImageTransform.Microsoft.dropshadow(OffX=0,OffY=2,Color=#3300000
     color:red;
     font-weight: 500;
 }
+
+
+.profile {
+
+    margin-top:100px;
+
+    .title {
+       
+        text-transform: uppercase;
+        color: #1A1D22;
+    }
+    .profile-header{
+             font-size: 30px;
+            font-weight: 800;
+            margin-top: 25px;
+            text-transform: uppercase;       
+    }
+    margin-bottom:50px;
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
