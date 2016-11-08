@@ -1,6 +1,7 @@
 import Cart from './cart/module';
 import Products from './products/module';
 import Home from './home/module';
+import Descriptions from './descriptions/module';
 import Buyfailed from './buyfailed/module';
 import Buysuccess from './buysuccess/module';
 export default angular.module('myapp.webshop', [
@@ -8,6 +9,7 @@ export default angular.module('myapp.webshop', [
     Products.name,
     Home.name,
     Buyfailed.name,
-    Buysuccess.name
+    Buysuccess.name,
+    Descriptions.name
 ])
 

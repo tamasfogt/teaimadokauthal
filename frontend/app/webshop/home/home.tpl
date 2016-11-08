@@ -42,7 +42,7 @@
                     </div>
                     <div class="col-md-6 wow fadeInRightBig">
                         <div class="feature">
-                           <img src="/dist/images/EnergyGraph.png"
+                           <img src="/dist/images/EnergyGraph.png"/>
                         </div>
                     </div>
                  </div>    

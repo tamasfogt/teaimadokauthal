@@ -37,6 +37,9 @@ Route::get('/unsuccessful', function () {
 Route::get('/products/{product}', function () {
     return view('index');
 });
+Route::get('/descriptions/{description}', function () {
+    return view('index');
+});
       
             
 Route::get('/errors/{error}', function () {

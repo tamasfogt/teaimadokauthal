@@ -4,7 +4,7 @@ function MainRouteConfig($stateProvider,$urlRouterProvider,$httpProvider,$locati
     $urlRouterProvider.otherwise('/home');
 	$httpProvider.defaults.headers.common["X-Requested-With"] = 'XMLHttpRequest';
 	$locationProvider.html5Mode(true);
-    $logProvider.debugEnabled(false);
+    $logProvider.debugEnabled(true);
    
 }
 export default MainRouteConfig;

@@ -290,7 +290,6 @@ a.project-link:hover {
     }
     .shipment{
         .shipment-header{
-            
             font-size: 30px;
             font-weight: 800;
             margin-top: 25px;
@@ -303,7 +302,7 @@ a.project-link:hover {
             box-shadow: 0 8px 17px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
         }
         .shipment-details{
-            
+
         }
         .shipment-payment-type-chooser{
             
@@ -512,6 +511,67 @@ filter:progid:DXImageTransform.Microsoft.dropshadow(OffX=0,OffY=2,Color=#3300000
 
 
 
+.description {
+    .descriptionheader{
+        background: url(../images/matchaproduct.png);
+        background-size: cover;
+        background-repeat: no-repeat;
+        height: 400px;
+
+    }
+    .colored {
+        background-color: dimgray;
+    }
+    .closed {
+        display:none;
+    }
+    .before-shadow-box{
+        padding-bottom: 200px;
+    }
+    .contentbox{
+        color:black;
+        margin-top:120px;
+       
+    }
+    .content-title {
+        padding-bottom: 100px;
+        padding-left: 10px;
+        font-size: 24px;
+        font-weight: 700;
+       
+
+    }
+    .description-content-shadow{
+            margin-top:20px;
+            padding:10px;
+            position:relative;
+            top:-200px;
+         min-height: 600px;
+            background-color: white;
+            box-shadow: 0 8px 17px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    }    
+    .description-image{
+        padding:30px;
+        
+        img{
+            border-radius: 5px 5px 5px 5px;
+            width:100%;
+        }
+    }
+    .description-content-normal{
+        
+            padding:10px;
+    }
+    .description-title {
+        font-size: 35px;
+        font-weight: 800;
+        margin-top: 25px;
+        text-transform: uppercase;
+        color:whitesmoke;
+        margin-top: 150px;
+    }
+
+}
 
 
 
