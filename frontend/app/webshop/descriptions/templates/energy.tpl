@@ -2,7 +2,7 @@
   <section class="descriptionheader parallax">
         <div class="container">
             <div class="row">
-                <p class="description-title">Fő cím</p>
+                <p class="description-title">Miért hatékony energiaforrás?</p>
             </div>
         </div>    
     </section>

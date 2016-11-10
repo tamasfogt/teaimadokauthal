@@ -376,10 +376,14 @@ a.project-link:hover {
 }
 
 .main_title {
+
     font-size: 50px;
+    @media(max-width:768px) {
+                    font-size: 40px;
+        }    
+    
     font-weight: bold;
     font-family: sans-serif;
-    margin-bottom: 100px;
        text-transform: uppercase;
     font-style: oblique;
 }

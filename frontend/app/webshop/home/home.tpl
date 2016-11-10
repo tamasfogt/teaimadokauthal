@@ -6,22 +6,118 @@
                         <div class="home_text">
                             <!-- TITLE AND DESC -->
 
-                                <h1 class="home-title text-center">Több energiára vágysz?</h1>
-                                <p class="home-secoundheader text-center">Pörgesd fel magad Amerika új kedvencével!</p>
-    
+                                <h1 class="home-title text-center wow fadeIn" data-wow-duration="0.5s">Több energiára vágysz?</h1>
+                                <p class="home-secoundheader text-center wow fadeIn" data-wow-duration="0.5s" data-wow-delay="1s">Pörgesd fel magad Amerika új kedvencével!</p>
+                            
                             <div class="download-btn">
                             <!-- BUTTON -->
-                                <a class="btn wow green lighten-2 pulse page-scroll"  data-wow-duration="2s" data-wow-iteration="100" href="#effective">Nézz körbe<i class="fa fa-angle-down"></i></a>
+                                <a class="btn wow green lighten-2 pulse page-scroll"  data-wow-duration="2s" data-wow-iteration="100" href="#matcha-title">Nézz körbe<i class="fa fa-angle-down"></i></a>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
     </section>
+<section id="matcha-title" >
+    <div class="inner_about_area">    
+         <div class="container">
+                <div class="row">
+                    <h1 class="main_title">Mi ez a furcsa zöld ital? </h1>
+                </div>
+        </div>
+    </div>
+</section>
+<section id="matchafirst" class="feature-box">
+             <div class="container">
+                <div class="row">
+                    <div class="col-md-6 wow fadeInLeftBig">
+                        <div class="feature_title">
+                            <h2>Ez a Matcha tea</h2>
+                            <p> Manapság a Nyugati országokban feltűnt egy új egészség őrület, aminek szerves része lett a Matcha tea. Az utóbbi években folyamatosan találkozhatunk vele divat bemutatókon, mesterszakácsok konyhájában, filmsztárok kedvenceként. Ezt a figyelmet egész egyszerűen a mennyei ízének és a számtalan jótékony hastásának köszönheti.</p>
+                        </div>
+                    </div>
+                    <div class="col-md-6 wow fadeInRightBig">
+                        <div class="rounded-feature">
+                           <img src="/dist/images/matcha-green-tea1.png"/>
+                        </div>
+                    </div>
+                 </div>    
+        </div>
+    </div>
+</section>
+
+    <section class="apps_screen page" id="SCREENS">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-10 wow fadeInBig" data-wow-duration="1s">
+
+                                    <div class="container">
+                                    <div class="row">
+                                                        <div class="col-md-12" data-wow-delay="0.2s">
+                                                            <div class="carousel slide" data-ride="carousel" id="quote-carousel">
+                                                                <!-- Bottom Carousel Indicators -->
+                                                                <ol class="carousel-indicators">
+                                                                    <li data-target="#quote-carousel" data-slide-to="0" class="active"><img class="img-responsive " src="/dist/images/picture.jpg" alt="">
+                                                                    </li>
+                                                                    <li data-target="#quote-carousel" data-slide-to="1"><img class="img-responsive" src="https://s3.amazonaws.com/uifaces/faces/twitter/rssems/128.jpg" alt="">
+                                                                    </li>
+                                                                    <li data-target="#quote-carousel" data-slide-to="2"><img class="img-responsive" src="https://s3.amazonaws.com/uifaces/faces/twitter/adellecharles/128.jpg" alt="">
+                                                                    </li>
+                                                                </ol>
+
+                                                                <!-- Carousel Slides / Quotes -->
+                                                                <div class="carousel-inner text-center">
+
+                                                                    <!-- Quote 1 -->
+                                                                    <div class="item active">
+                                                                        <blockquote>
+                                                                            <div class="row">
+                                                                                <div class="col-sm-8 col-sm-offset-2">
+
+                                                                                    <p>Egyszerűen imádom. Minden reggel ezt iszom és azóta sokkal könnyebben indul a reggelem.</p>
+                                                                                    <small>Varga Zsuzsa</small>
+                                                                                </div>
+                                                                            </div>
+                                                                        </blockquote>
+                                                                    </div>
+                                                                    <!-- Quote 2 -->
+                                                                    <div class="item">
+                                                                        <blockquote>
+                                                                            <div class="row">
+                                                                                <div class="col-sm-8 col-sm-offset-2">
+
+                                                                                    <p>Sokat keresgéltem, hogy mi lehet a tökéletes megoldás a kávé lecserélésére és azt hiszem hogy most sikerült megtalálnom. </p>
+                                                                                    <small>Patkó Tibor</small>
+                                                                                </div>
+                                                                            </div>
+                                                                        </blockquote>
+                                                                    </div>
+                                                                    <!-- Quote 3 -->
+                                                                    <div class="item">
+                                                                        <blockquote>
+                                                                            <div class="row">
+                                                                                <div class="col-sm-8 col-sm-offset-2">
+
+                                                                                    <p>A reggeli rituálémhoz elengedhetetlen. Egészséges és finom mi kell még ? :)</p>
+                                                                                    <small>Bíró Anna</small>
+                                                                                </div>
+                                                                            </div>
+                                                                        </blockquote>
+                                                                    </div>
+                                                                </div>
+
+                                                            </div>
+                                                        </div>
+                                                 
+                                    </div>
+                        </div>
+                     </div>
+                 </div>
+            </div>
+    </section>
 
 
-  
-    <!-- END HEADER SECTION -->
+    <!-- END HEADER SECTION
 <section id="home-title" >
     <div class="inner_about_area">    
          <div class="container">
@@ -30,7 +126,7 @@
                 </div>
         </div>
     </div>
-</section>
+</section> -->
 <section id="effective" class="feature-box">
              <div class="container">
                 <div class="row">
@@ -38,6 +134,7 @@
                         <div class="feature_title">
                             <h2>Dobd ki a kávéd!</h2>
                             <p>A matcha tea körülbelül harmad annyi koffeint tartalmaz, mint a kávé vagy az energia italok, viszont az energia szint, amit biztosít mégis sokkal magasabb. Ez a magas mennyisőgű L-Theanine-nek  köszönhető, ami stimulálja az alfa hullámokat. Az alfahullámok erősödésének következményeként azt veszed majd észre, hogy éberebb és fókuszáltabb leszel. </p>
+                            <a class="btn green lighten-2 center-block col-md-6 col-sm-6 col-xs-8" href="#" ui-sref="descriptions({descriptionId: 'energy'})" style="font-size:24px;" role="button"><b>Mesélj még!</b></a>
                         </div>
                     </div>
                     <div class="col-md-6 wow fadeInRightBig">
@@ -62,11 +159,13 @@
                         <div class="feature_title">
                             <h2>Fogyj hatékonyabban!</h2>
                             <p>Egy antioxidáns katekin amit EGCG-nek [epigallocatechin gallate] neveznek nagymértékben fordul elő a matcha teában. Ez a vegyület rendkívüli módon javítja a metabolizmusunk és megállítja a zsír cellék növekedését. Emellett a matcha tea szinte semmi kalóriát nem tartalmaz.</p>
+                            <a class="btn green lighten-2 center-block col-md-6 col-sm-6 col-xs-8" href="#" ui-sref="descriptions({descriptionId: 'weightloss'})" style="font-size:24px;" role="button"><b>Mesélj még!</b></a>                            
                         </div>
                     </div>
                 </div>    
     </div>
 </section>
+
 <section class="feature-box">
        <div class="container">
                 <div class="row">
@@ -74,6 +173,7 @@
                         <div class="feature_title">
                             <h2>Javítsd az egészséged!</h2>
                             <p>A matcha tea <b>10x</b> annyi antioxidánst tartalmaz, mint a normál zöldteák! Ez a matcha egyik legnagyobb előnye, mivel az antioxidánsok a szervezetünk egyik létfontosságú elemei. Az antioxidánsok legfontosabb szerepe, hogy megakadályozzák a betegségek kialakulását.</p>
+                            <a class="btn green lighten-2 center-block col-md-6 col-sm-6 col-xs-8" href="#" ui-sref="descriptions({descriptionId: 'health'})" style="font-size:24px;" role="button"><b>Mesélj még!</b></a>                            
                         </div>
                     </div>
                     <div class="col-md-6  wow fadeInRightBig">
@@ -85,10 +185,12 @@
                 </div>    
         </div>
 </section>
+
+
     <div class="call_to_action">
         <div class="container">
-            <div class="row wow fadeInLeftBig center-block" data-wow-duration="1s">
-                    <a class="btn center-block col-md-12 col-sm-12 col-xs-12" href="#" ui-sref="product({productId: 'matcha'})" style="font-size:24px;" role="button"><b>Megveszem</b></a>
+            <div class="row wow bounceIn center-block" data-wow-duration="2s">
+                    <a class="btn center-block col-md-12 col-sm-12 col-xs-12 "  href="#" ui-sref="product({productId: 'matcha'})" style="font-size:24px;" role="button"><b>Megveszem</b></a>
                 </div>
             </div>
         </div>
@@ -349,86 +451,6 @@
     </div>
 
     <!-- END CALL TO ACTION -->
-
-
-<!-- =========================
-     Start APPS SCREEN SECTION
-============================== -->
-    <section class="apps_screen page" id="SCREENS">
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-10 wow fadeInBig" data-wow-duration="1s">
-
-                                    <div class="container">
-                                    <div class="row">
-                                                        <div class="col-md-12" data-wow-delay="0.2s">
-                                                            <div class="carousel slide" data-ride="carousel" id="quote-carousel">
-                                                                <!-- Bottom Carousel Indicators -->
-                                                                <ol class="carousel-indicators">
-                                                                    <li data-target="#quote-carousel" data-slide-to="0" class="active"><img class="img-responsive " src="/dist/images/picture.jpg" alt="">
-                                                                    </li>
-                                                                    <li data-target="#quote-carousel" data-slide-to="1"><img class="img-responsive" src="https://s3.amazonaws.com/uifaces/faces/twitter/rssems/128.jpg" alt="">
-                                                                    </li>
-                                                                    <li data-target="#quote-carousel" data-slide-to="2"><img class="img-responsive" src="https://s3.amazonaws.com/uifaces/faces/twitter/adellecharles/128.jpg" alt="">
-                                                                    </li>
-                                                                </ol>
-
-                                                                <!-- Carousel Slides / Quotes -->
-                                                                <div class="carousel-inner text-center">
-
-                                                                    <!-- Quote 1 -->
-                                                                    <div class="item active">
-                                                                        <blockquote>
-                                                                            <div class="row">
-                                                                                <div class="col-sm-8 col-sm-offset-2">
-
-                                                                                    <p>Egyszerűen imádom. Minden reggel ezt iszom és azóta sokkal könnyebben indul a reggelem.</p>
-                                                                                    <small>Varga Zsuzsa</small>
-                                                                                </div>
-                                                                            </div>
-                                                                        </blockquote>
-                                                                    </div>
-                                                                    <!-- Quote 2 -->
-                                                                    <div class="item">
-                                                                        <blockquote>
-                                                                            <div class="row">
-                                                                                <div class="col-sm-8 col-sm-offset-2">
-
-                                                                                    <p>Sokat keresgéltem, hogy mi lehet a tökéletes megoldás a kávé lecserélésére és azt hiszem hogy most sikerült megtalálnom. </p>
-                                                                                    <small>Patkó Tibor</small>
-                                                                                </div>
-                                                                            </div>
-                                                                        </blockquote>
-                                                                    </div>
-                                                                    <!-- Quote 3 -->
-                                                                    <div class="item">
-                                                                        <blockquote>
-                                                                            <div class="row">
-                                                                                <div class="col-sm-8 col-sm-offset-2">
-
-                                                                                    <p>A reggeli rituálémhoz elengedhetetlen. Egészséges és finom mi kell még ? :)</p>
-                                                                                    <small>Bíró Anna</small>
-                                                                                </div>
-                                                                            </div>
-                                                                        </blockquote>
-                                                                    </div>
-                                                                </div>
-
-                                                            </div>
-                                                        </div>
-                                                 
-                                    </div>
-                        </div>
-                     </div>
-                 </div>
-            </div>
-    </section>
-
-
-
-    <!-- ENS APPS SCREEN -->
-
-
 
 
 
