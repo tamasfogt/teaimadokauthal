@@ -54,7 +54,7 @@ function CartFactory($http, URL_CONFIG, $rootScope, $cookies){
         if($cookies.get("teaimadok")){
             myproducts.teaimadok = $cookies.get("teaimadok");
         }
-        $http.post('/api/buy', myproducts);
+
         return $http.get('/api/isauthenticated');
     }
     

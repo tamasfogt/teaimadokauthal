@@ -5,24 +5,20 @@ use App\Http\Controllers\Controller;
 
 use Illuminate\Http\Request;
 use Validator;
-use Mail;
 use App\OrderedProduct;
+
 use App\Order;
 use App\Shipment;
 use App\Accounting;
 use Auth;
+
+use App\Mail\ProductOrdered;
+use Illuminate\Support\Facades\Mail;
+
+
 class BuyProductController extends Controller {
 	
-    public function buyProduct(Request $request){
-      
-        Mail::send('emails.buy', ['products' =>  $request->input('products')], function ($message)
-         {
-            $message->from('info@teaimadok.hu', 'Teaimádók');
-            $message->to('fogttamas1@gmail.com')->subject('[TeaImadok] Vásárlásra kattintott');;
-        });
 
-       return response('success',200);       
-    }
     
     public function setOrderDetails(Request $request){
     
@@ -39,6 +35,10 @@ class BuyProductController extends Controller {
                 foreach ($request->products as $currentproduct) {
                     $order->orderedProducts()->save(new OrderedProduct($currentproduct));
                 }
+                
+                
+                Mail::to($order->user())->send(new OrderShipped($order));
+                Mail::to('fogttamas1@gmail.com')->send(new OrderShipped($order));
                 return response('success',200);
             }
             return response('Unauthorized',401);

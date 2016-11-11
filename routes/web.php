@@ -45,8 +45,7 @@ Route::get('/descriptions/{description}', function () {
 Route::get('/errors/{error}', function () {
     return view('index');
 });
-      
-Route::post('/api/buy', 'CartHandler\BuyProductController@buyProduct' );
+
             
 
 Route::get('/login', 'LoginController@index');

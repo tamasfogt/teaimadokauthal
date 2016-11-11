@@ -10,18 +10,6 @@ use Auth;
 class UserController extends Controller {
 	
 
-    
-    public function editUserPassword(Request $request){
-     $user = User::find(Authorizer::getResourceOwnerId());
-        if($request->input('password')!==null){
-            $user->password = \Illuminate\Support\Facades\Hash::make($request->input('password'));
-        }
-        
-        $user->save();
-        return response('success',200);
-        
-    }
-
     public function getUserDetails(){
             
             if(Auth::check()){
@@ -44,7 +32,8 @@ class UserController extends Controller {
                 $user->zipcode = $request->input('zipcode');
                 $user->address = $request->input('address');
                 $user->phone = $request->input('phone');
-                $user->save();
+                $user->save();  
+                
                 return response('ok',200);
                 
             }
