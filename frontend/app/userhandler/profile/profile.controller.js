@@ -6,8 +6,10 @@ function ProfileController(ProfileFactory, $cookies) {
     vm.history = [];
     
     ProfileFactory.getUserDetails().then(function success(data){
-        vm.profile = data.data;
-        vm.profileModifyDetails = data.data;
+        if(data.data != 'Unauthorized') {
+            vm.profile = data.data;
+            vm.profileModifyDetails = data.data;
+        }    
     },function error(data){
         console.log('error happened')
     });

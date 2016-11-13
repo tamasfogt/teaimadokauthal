@@ -27,5 +27,9 @@ class Order extends Model
     public function orderedProducts()
     {
         return $this->hasMany('App\OrderedProduct');
+    }   
+    public function status()
+    {
+        return $this->hasOne('App\OrderStatus');
     }    
 }

@@ -31,6 +31,9 @@ Route::get('/cart', function () {
 Route::get('/unsuccessful', function () {
     return view('index');
 });
+Route::get('/successful', function () {
+    return view('index');
+});
 
      
             
@@ -67,3 +70,9 @@ Route::post('/api/sendorder', 'CartHandler\BuyProductController@setOrderDetails'
 
 Route::get('auth/logout', 'Auth\LoginController@logout');
 Auth::routes();
+
+Route::post('/api/ordershipped', 'Admin\OrderHandlerController@setOrderShipped');
+
+
+
+

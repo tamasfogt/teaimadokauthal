@@ -20,6 +20,7 @@ class SocialAuthController extends Controller
     {
         $user = $service->createOrGetUser(Socialite::driver('facebook')->user());
 
+        Mail::to($user)->send(new SuccessfullyRegistered());       
         auth()->login($user);
 
         return redirect()->to('/cart');

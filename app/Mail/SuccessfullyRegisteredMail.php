@@ -7,7 +7,7 @@ use Illuminate\Mail\Mailable;
 use Illuminate\Queue\SerializesModels;
 use Illuminate\Contracts\Queue\ShouldQueue;
 
-class SuccessfullyRegistered extends Mailable
+class SuccessfullyRegisteredMail extends Mailable
 {
     use Queueable, SerializesModels;
 
@@ -28,6 +28,6 @@ class SuccessfullyRegistered extends Mailable
      */
     public function build()
     {
-        return $this->view('emails.orders.registered')->subject("[TeaImádók] Sikeres Regisztráció");
+        return $this->view('emails.users.registered')->subject("[TeaImádók] Sikeres Regisztráció");
     }
 }

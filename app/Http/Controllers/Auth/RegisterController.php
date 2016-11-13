@@ -7,7 +7,8 @@ use Validator;
 use App\Http\Controllers\Controller;
 use Illuminate\Foundation\Auth\RegistersUsers;
 use Illuminate\Support\Facades\Mail;
-use App\Mail\SuccessfullyRegistered;
+
+use App\Mail\SuccessfullyRegisteredMail;
 
 class RegisterController extends Controller
 {
@@ -70,7 +71,7 @@ class RegisterController extends Controller
             'password' => bcrypt($data['password']),
         ]);
 
-        Mail::to($user)->send(new SuccessfullyRegistered());              
+        Mail::to($user)->send(new SuccessfullyRegisteredMail());              
         
         return $user;
     }

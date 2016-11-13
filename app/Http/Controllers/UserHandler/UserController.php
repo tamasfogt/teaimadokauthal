@@ -22,7 +22,7 @@ class UserController extends Controller {
     }   
     
     public function setUserDetails(Request $request){
-    
+            
             if(Auth::check()){
                 $user = Auth::user();
                 $user->name = $request->input('name');
@@ -34,7 +34,19 @@ class UserController extends Controller {
                 $user->phone = $request->input('phone');
                 $user->save();  
                 
-                return response('ok',200);
+                return response('success',200);
+                
+            }
+            return response('Unauthorized',401);
+            
+    }
+    
+    public function setPassword(Request $request){
+            
+            if(Auth::check()){
+                $user = Auth::user();
+                
+                return response('success',200);
                 
             }
             return response('Unauthorized',401);

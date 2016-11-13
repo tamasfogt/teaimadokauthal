@@ -194,7 +194,7 @@
                 <div class="shipment-review" ng-class="vm.shippingReview ? 'closed' : ''">
                     <button class="btn back col-md-12 col-sm-12 col-xs-12"   ng-click="vm.moveToPanel('shippingPayment')">Vissza</button>         
                         <div class="shipment-content  col-md-12 col-sm-12 col-xs-12">
-                                <b>Vásárolt Termékek</b>
+                                <h3>Vásárolt Termékek</h3>
                                 <table class="table table-hover">
                                     <tr>
                                         <th>Név</th>
@@ -207,9 +207,7 @@
                                         <td>{{product.quantity}}</td>
                                     </tr>
                                 </table>
-                                <p><strong>Szállítási költség:</strong> {{vm.shippingCost}} Ft</p>
-                                <p><strong>Összes fizetendő:</strong> {{vm.productDetails.fullPrice}} Ft</p>
-                                <p><small>A fent feltűntetett árak tartalmazzák az ÁFÁ-t.</small></p>
+
                                 <b>Szállítás</b>
                                 <table class="table table-hover">
                                     <tr>
@@ -240,10 +238,14 @@
                                         <td>{{vm.productDetails.accountingDetails.phone}}</td>
                                     </tr>
                                 </table> 
+                                <p><strong>Szállítási költség:</strong> {{vm.shippingCost}} Ft</p>
+                                <b>Fizetési típusa</b>
+                                <p>{{vm.productDetails.paymentType}}</p>                    
+                                <h3><strong>Összes fizetendő:</strong> {{vm.productDetails.fullPrice}} Ft</h3>
+                                <p><small>A fent feltűntetett árak tartalmazzák az ÁFÁ-t.</small></p>                            
                                 <b>Üzenet</b>
                                 <p>{{vm.productDetails.message}}</p>
-                                <b>Fizetési típusa</b>
-                                <p>{{vm.productDetails.paymentType}}</p>
+
                         </div>
                    <button class="btn-large col-md-12 col-sm-12 col-xs-12" ng-click="vm.sendOrder()">Fizetés befejezése</button>     
                 </div>                 

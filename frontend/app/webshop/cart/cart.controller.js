@@ -1,4 +1,4 @@
-function CartController(CartFactory, ProfileFactory, $state,$rootScope,  toastr, $timeout) {
+function CartController(CartFactory, ProfileFactory, $state,$rootScope,  toastr, $timeout, $cookies) {
   "ngInject"
   var vm = this;
     vm.products = CartFactory.getProducts();
@@ -37,11 +37,22 @@ function CartController(CartFactory, ProfileFactory, $state,$rootScope,  toastr,
     
     function sendOrder(){
         CartFactory.sendOrder(vm.productDetails).then(success,error);
+                    $( "#preloader" ).removeClass( "mypreloaderNone" );  
+            $( "#mypreloaderbackground" ).addClass( "mypreloaderbackground" );
         
         function success(response){
-            console.log(success);
+            if(response.data == 'success'){
+                $cookies.remove("teaimadokproducts");
+                $rootScope.$broadcast('updatecartheader');
+
+                $state.go('buysuccess');
+            }   
+                $( "#preloader" ).addClass( "mypreloaderNone" );  
+                $( "#mypreloaderbackground" ).removeClass( "mypreloaderbackground" );
         }
         function error(error){
+                $( "#preloader" ).addClass( "mypreloaderNone" );  
+                $( "#mypreloaderbackground" ).removeClass( "mypreloaderbackground" );
               $state.go('buyfailed');
         }
     }
@@ -108,7 +119,6 @@ function CartController(CartFactory, ProfileFactory, $state,$rootScope,  toastr,
         CartFactory.buy(vm.products).then(function(response){
             
             if(response.data === 'false'){
-                console.log(response.data)
                  window.location.href = "/login"
             }
             vm.showPayment = true;

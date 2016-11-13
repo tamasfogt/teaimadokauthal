@@ -6,8 +6,8 @@ use Illuminate\Bus\Queueable;
 use Illuminate\Mail\Mailable;
 use Illuminate\Queue\SerializesModels;
 use Illuminate\Contracts\Queue\ShouldQueue;
-
-class OrderShipped extends Mailable
+use App\Order;
+class OrderShippedMail extends Mailable
 {
     use Queueable, SerializesModels;
 
@@ -31,8 +31,6 @@ class OrderShipped extends Mailable
     public function build()
     {
         return $this->view('emails.orders.shipped')
-                ->with([
-                        'order' => $this->order
-                    ])->subject("[TeaImádók] Csomag feladva");
+            ->subject("[TeaImádók] Csomag feladva");
     }
 }
