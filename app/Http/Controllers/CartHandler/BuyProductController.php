@@ -37,7 +37,7 @@ class BuyProductController extends Controller {
                     $order->orderedProducts()->save(new OrderedProduct($currentproduct));
                 }
             
-                Mail::to(Auth::user())->send(new ProductOrdered($order));
+                Mail::to(Auth::user())->send(new ProductOrderedMail($order));
                 Mail::to('fogttamas1@gmail.com')->send(new ProductOrderedMail($order));
                 return response('success',200);
             }

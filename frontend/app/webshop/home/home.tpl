@@ -33,7 +33,7 @@
                     <div class="col-md-6 wow fadeInLeftBig">
                         <div class="feature_title">
                             <h2>Ez a Matcha tea</h2>
-                            <p> Manapság a Nyugati országokban feltűnt egy új egészség őrület, aminek szerves része lett a Matcha tea. Az utóbbi években folyamatosan találkozhatunk vele divat bemutatókon, mesterszakácsok konyhájában, filmsztárok kedvenceként. Ezt a figyelmet egész egyszerűen a mennyei ízének és a számtalan jótékony hastásának köszönheti.</p>
+                            <p> Manapság a Nyugati országokban feltűnt egy új egészség őrület, aminek szerves része lett a Matcha tea. Az utóbbi években folyamatosan találkozhatunk vele divat bemutatókon, mesterszakácsok konyhájában, filmsztárok kedvenceként. Ezt a figyelmet egészen egyszerűen mennyei ízének, gyors elkészíthetőségének és  számtalan jótékony hastásának köszönheti.</p>
                         </div>
                     </div>
                     <div class="col-md-6 wow fadeInRightBig">
@@ -86,7 +86,7 @@
                                                                             <div class="row">
                                                                                 <div class="col-sm-8 col-sm-offset-2">
 
-                                                                                    <p>Sokat keresgéltem, hogy mi lehet a tökéletes megoldás a kávé lecserélésére és azt hiszem hogy most sikerült megtalálnom. </p>
+                                                                                    <p>Sokat keresgéltem, hogy mi lehet a tökéletes megoldás a kávé lecserélésére és azt hiszem, hogy most sikerült megtalálnom. </p>
                                                                                     <small>Patkó Tibor</small>
                                                                                 </div>
                                                                             </div>

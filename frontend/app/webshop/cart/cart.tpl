@@ -24,6 +24,7 @@
                         <div class="row productpricepanel" >
                             <div class="row">
                                 <div class="sum">{{product.price*product.quantity}}Ft</div>
+                                <small>Tartalmazza a {{(product.price*0.27)| number:0}}Ft ÁFÁ-t</small>                                
                             </div>  
                              <div class="row">
                                  <div class="modifyvalue">
@@ -242,7 +243,7 @@
                                 <b>Fizetési típusa</b>
                                 <p>{{vm.productDetails.paymentType}}</p>                    
                                 <h3><strong>Összes fizetendő:</strong> {{vm.productDetails.fullPrice}} Ft</h3>
-                                <p><small>A fent feltűntetett árak tartalmazzák az ÁFÁ-t.</small></p>                            
+                                <p><small>A fent feltűntetett árak tartalmazzák az ÁFÁ-t. ({{(vm.productDetails.fullPrice*0.27)| number:0}}Ft)</small></p>                            
                                 <b>Üzenet</b>
                                 <p>{{vm.productDetails.message}}</p>
 

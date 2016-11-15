@@ -7,7 +7,7 @@ use Illuminate\Database\Eloquent\Model;
 class Accounting extends Model
 {
     protected $fillable = [
-        'country','zipcode','city','address','phone'
+        'country','zipcode','city','address','phone','name'
     ];
     
     public function order()

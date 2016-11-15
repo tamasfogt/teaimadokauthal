@@ -16,6 +16,7 @@ class CreateAccountingsTable extends Migration
         Schema::create('accountings', function (Blueprint $table) {
             $table->increments('id');
             $table->integer('order_id');    
+            $table->string('name');
             $table->string('address');
             $table->string('city');
             $table->string('country');

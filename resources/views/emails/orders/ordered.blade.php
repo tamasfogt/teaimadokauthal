@@ -79,28 +79,34 @@
   </tr>
 </table>
 </repeater>
-<table width="100%" border="0" cellspacing="0" cellpadding="0" class="full">
+<table width="100%" border="0" cellspacing="0" cellpadding="0" class="full" >
   <tr>
-    <td align="center"><table width="600" border="0" cellspacing="0" cellpadding="0" align="center" class="devicewidth">
+    <td  align="center"><table  style="padding-left:20px" width="600" border="0" cellspacing="0"  bgcolor="#ffffff" cellpadding="0" align="center" class="devicewidth">
+        <tr>
+            <td height="20"></td>
+        </tr>   
         <tr>
           <td><table >
                     <tr>
-                      <td ><h3>Rendelt Termékek</h3></td>
+                      <td align="center"><h3>Rendelt Termékek</h3></td>
                     </tr>
                     <tr>
-                        <th >Név</th>
-                        <th >Ár</th>
-                        <th >Mennyiség</th>
+                        <th align="center">Név</th>
+                        <th align="center">Ár</th>
+                        <th align="center">Mennyiség</th>
                     </tr>                
               @foreach ($order->orderedProducts as $product)
                         <tr>
-                            <td>{{ $product->name }}</td>
-                            <td>{{ $product->price }}</td>
-                            <td>{{ $product->quantity }}</td>    
+                            <td align="center">{{ $product->name }}</td>
+                            <td align="center">{{ $product->price }}</td>
+                            <td align="center">{{ $product->quantity }}</td>    
                         </tr>
               @endforeach
             </table></td>
         </tr>
+            <tr>
+                <td height="3"><small>A szállítási költség 5000Ft alatti vásárlás esetén az árhoz hozzáadódik.</small></td>
+            </tr>         
             <tr>
                 <td height="20"></td>
             </tr>   
@@ -139,14 +145,18 @@
                     <td height="20"></td>
                 </tr>          
             <tr>
-                <td>Fizetendő összeg:</td>
-                <td>{{ $order->fullprice}}</td>
+                <td><h3>Fizetendő összeg: {{ $order->fullprice}}</h3></td>
             </tr>
+            <tr>
+                <td><h3>Az ár tartalmazza az ÁFÁ-t</p></td>
+            </tr>        
                 <tr>
                     <td height="5"></td>
                 </tr>          
             <tr>
                 <td>Üzenet a futárnak:</td>
+            </tr>
+            <tr>
                 <td>{{ $order->message}}</td>
             </tr>
             <tr>
